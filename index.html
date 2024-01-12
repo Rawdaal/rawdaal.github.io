@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Discomfort Diagnosis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Dental Discomfort Diagnosis Tool</h1>
+
+        <!-- Positioning container for the overlays -->
+        <div id="teeth-overlays" style="position: relative;">
+            <img id="dental-chart" src="teeth.png" alt="Dental Chart" style="max-width: 100%; height: auto;">
+
+            <div class="tooth-overlay" id="Incisor" onclick="selectTooth('Incisor');" style="position: absolute; top: 20%; left: 35%; width: 35%; height: 45%;"></div>
+
+            <div class="tooth-overlay" id="Canine1" onclick="selectTooth('Canine1');" style="position: absolute; top: 20%; left: 30%; width: 5%; height: 45%;"></div>
+            <div class="tooth-overlay" id="Canine2" onclick="selectTooth('Canine2');" style="position: absolute; top: 20%; left: 70%; width: 5%; height: 45%;"></div>
+
+            <div class="tooth-overlay" id="Molar1" onclick="selectTooth('Molar1');" style="position: absolute; top: 20%; left: 20%; width: 10%; height: 45%;"></div>
+            <div class="tooth-overlay" id="Molar2" onclick="selectTooth('Molar2');" style="position: absolute; top: 20%; left: 70%; width: 10%; height: 45%;"></div>
+            <!-- Repeat overlays for each tooth, adjusting top, left, width, and height percentages -->
+        </div>
+
+
+        <div id="discomfort-level-input">
+            <label for="discomfort-level">Discomfort Level (1-3):</label>
+            <input type="range" id="discomfort-level" name="discomfort-level" min="1" max="3">
+        </div>
+
+        <button id="submit-button">Diagnose</button>
+
+        <div id="diagnosis-results"></div>
+    </div>
+
+    <!-- Popup Box -->
+    <div id="popupBox" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>How to Use This Website</h2>
+            <p>Welcome to our Dental Diagnosis Tool! Here's how to use it:</p>
+            <ul>
+                <li>Click on the tooth where you feel discomfort.</li>
+                <li>Rate your discomfort on a scale of 1-3.</li>
+                <li>Receive potential diagnoses based on your input.</li>
+            </ul>
+            <p>Remember, this tool is not a substitute for professional dental advice.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
