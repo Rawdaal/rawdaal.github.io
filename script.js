@@ -23,7 +23,7 @@ const toothDiagnoses = {
         2: 'Canine Selected:\n Cracks or chips, moderate gum disease.',
         3: 'Canine Selected:\n Deep fracture, abscess formation.'
     },
-    'Mola1r': {
+    'Molar1': {
         1: 'Molar Selected:\n Food impaction, mild sensitivity.',
         2: 'Molar Selected:\n Developing cavities, moderate pain from impacted food.',
         3: 'Molar Selected:\n Advanced decay, possible wisdom tooth issues, need for root canal therapy.'
@@ -50,7 +50,7 @@ function getToothDiagnosis(tooth, level) {
     if(toothDiagnoses[tooth]) {
         return toothDiagnoses[tooth][level];
     } else {
-        return 'No diagnosis available for this tooth.';
+        return 'No diagnosis available for this part.';
     }
 }
 

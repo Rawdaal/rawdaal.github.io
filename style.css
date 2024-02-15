@@ -21,7 +21,7 @@ body {
 }
 
 #teeth-overlays .tooth-part {
-    position: absolute;
+    position: relative;
     /* Position each tooth overlay over the corresponding tooth */
     background-color: rgba(255, 255, 255, 0); /* Transparent */
 }
@@ -30,6 +30,7 @@ body {
     background-color: rgba(0, 0, 0, 0); /* Make the overlays invisible */
     cursor: pointer; /* Change the cursor to indicate clickable area */
 }
+
 
 
 .highlight {
